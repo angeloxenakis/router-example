@@ -5,13 +5,11 @@ import { NavBar } from "./components/NavBar"
 import { BrowserRouter, Route } from "react-router-dom"
 
 function App() {
+  
   return (
     <div className="App">
-      <NavBar/>
-      <BrowserRouter>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/card" component={Card}/>
-      </BrowserRouter>
+      <Home />
+      {/* <Card /> */}
     </div>
   );
 }

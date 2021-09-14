@@ -1,6 +1,13 @@
 import React from "react"
+import { useHistory } from "react-router-dom"
 
 export const Card = () => {
+    let history = useHistory()
+
+    const handleClick = () => {
+        history.push("/")
+    }
+
     return(
         <div className="card">
             <div className="card-block">
@@ -11,6 +18,7 @@ export const Card = () => {
             </div>
             <div className="card-footer">
                 <h4>...and some sort of footer here</h4>
+                <h5 onClick={handleClick}>Click Here for Home Page</h5>
             </div>      
         </div>
     )
